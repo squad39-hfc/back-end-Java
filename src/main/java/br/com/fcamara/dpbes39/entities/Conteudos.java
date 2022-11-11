@@ -17,6 +17,8 @@ public class Conteudos {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
+	private String nome;
+	
 	@ManyToMany
 	private List<NewUsers> idUsers = new ArrayList<NewUsers>();
 
@@ -28,6 +30,13 @@ public class Conteudos {
 	
 	public Conteudos() {
 		super();
+	}
+
+    
+   
+	public Conteudos(String nome) {
+		super();
+		this.nome = nome;
 	}
 
 
@@ -48,6 +57,18 @@ public class Conteudos {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+    
+
+	public String getNome() {
+		return nome;
+	}
+
+
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 
@@ -75,7 +96,7 @@ public class Conteudos {
 	}
 
 	
-
+  
 	
 
 }

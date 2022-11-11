@@ -41,6 +41,14 @@ public class Trilhas {
 	public Trilhas() {
 		super();
 	}
+	
+	
+	public Trilhas(String nome) {
+		super();
+		this.nome = nome;
+	}
+
+
 
 
 	public Trilhas(String nome, List<NewUsers> users, List<Conteudos> conteudos) {
