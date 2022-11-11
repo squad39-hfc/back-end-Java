@@ -28,8 +28,8 @@ public class ConteudoController {
 		private ConteudoRepository conteudoRepository;		
 		
 		@PostMapping
-		public Conteudos novaConteudo(@RequestParam String nome) {
-			Conteudos conteudo = new Conteudos(nome);		
+		public Conteudos novaConteudo(@RequestParam String nome,  String descricao) {
+			Conteudos conteudo = new Conteudos(nome, descricao);		
 			conteudoRepository.save(conteudo);		
 			return conteudo;				
 		}

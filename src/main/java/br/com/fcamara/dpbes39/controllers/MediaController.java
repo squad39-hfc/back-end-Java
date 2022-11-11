@@ -12,53 +12,42 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.fcamara.dpbes39.entities.Trilhas;
-import br.com.fcamara.dpbes39.repositories.TrilhaRepository;
+import br.com.fcamara.dpbes39.entities.Medias;
+import br.com.fcamara.dpbes39.repositories.MediaRepository;
 
 @RestController
-@RequestMapping("/api/trilhas")
-public class TrilhaController {
-	
+@RequestMapping("/api/medias")
+public class MediaController {
+
+
 	@Autowired
-	private TrilhaRepository trilhaRepository;
-	
-	//Função retorna uma trilha
+	private MediaRepository mediaRepository;
+		
 	@PostMapping
-	public Trilhas novaTrilha(@RequestParam String nome) {
-		Trilhas trilha = new Trilhas(nome);		
-		trilhaRepository.save(trilha);		
-		return trilha;				
+	public Medias novamedia(@RequestParam String type, String link, String duration) {
+		Medias media = new Medias(type,link,duration);		
+		mediaRepository.save(media);		
+		return media;				
 	}
 	
 	@GetMapping(path = {"/{id}"})
 	public ResponseEntity findById(@PathVariable Integer id){
-	   return trilhaRepository.findById(id)
+	   return mediaRepository.findById(id)
 	           .map(record -> ResponseEntity.ok().body(record))
 	           .orElse(ResponseEntity.notFound().build());
 	}
 	
 	@GetMapping(path = {"/all"})
-	public Iterable<Trilhas> findAll(){
-	   return trilhaRepository.findAll();	       
+	public Iterable<Medias> findAll(){
+	   return mediaRepository.findAll();	       
 	}
 	
-	
-	@PutMapping(value="/{id}")
-	public ResponseEntity update(@PathVariable("id") Integer id,
-	                                      @RequestBody Trilhas trilha) {
-	   return trilhaRepository.findById(id)
-	           .map(record -> {
-	               record.setNome(trilha.getNome());
-	               Trilhas updated = trilhaRepository.save(record);
-	               return ResponseEntity.ok().body(updated);
-	           }).orElse(ResponseEntity.notFound().build());
-	}
 	
 	@DeleteMapping(path ={"/{id}"})
 	public ResponseEntity <?> delete(@PathVariable Integer id) {
-	   return trilhaRepository.findById(id)
+	   return mediaRepository.findById(id)
 	           .map(record -> {
-	        	   trilhaRepository.deleteById(id);
+	        	   mediaRepository.deleteById(id);
 	               return ResponseEntity.ok().build();
 	           }).orElse(ResponseEntity.notFound().build());
 	}
