@@ -10,10 +10,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+
+import lombok.Builder;
+
 import javax.persistence.JoinColumn;
 
 
 @Entity
+@Builder
 public class Medias {
 	
 	@Id

@@ -13,7 +13,11 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
+import lombok.Builder;
+
+
 @Entity
+@Builder
 public class Conteudos {
 
 	@Id
@@ -23,6 +27,8 @@ public class Conteudos {
 	private String nome;
 
 	private String descricao;
+	
+	private boolean finalizado;
 
 	// @ManyToMany
 	// @JoinTable(name="Conteudos_Medias",
@@ -35,7 +41,7 @@ public class Conteudos {
 	@ManyToMany
 	private List<NewUsers> idUsers = new ArrayList<NewUsers>();
 
-	@ManyToMany
+	@ManyToMany(mappedBy = "conteudos", cascade = CascadeType.PERSIST)
 	private List<Trilhas> idTrilhas = new ArrayList<Trilhas>();
 
 	public Conteudos() {

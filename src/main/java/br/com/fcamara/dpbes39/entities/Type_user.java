@@ -16,7 +16,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "typeUsers")
 public class Type_user {
-	
+		  
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idType;

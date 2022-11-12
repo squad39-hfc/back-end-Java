@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -13,7 +14,13 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+
+import lombok.Builder;
+
 @Entity
+@Builder
 public class Trilhas {
 	
 	
@@ -22,6 +29,8 @@ public class Trilhas {
 	private int idTrilha;
 	
 	private String nome;
+	
+	private int progresso;
 	
 	
 	@ManyToMany	
