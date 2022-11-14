@@ -30,11 +30,6 @@ public class Conteudos {
 	
 	private boolean finalizado;
 
-	// @ManyToMany
-	// @JoinTable(name="Conteudos_Medias",
-	// joinColumns= @JoinColumn(name="idConteudo",referencedColumnName = "id"),
-	// inverseJoinColumns= @JoinColumn(name="idMedias",referencedColumnName =
-	// "idMedias"))
 	@ManyToMany(mappedBy = "conteudos", cascade = CascadeType.PERSIST)
 	private List<Medias> medias = new ArrayList<Medias>();
 
@@ -47,6 +42,15 @@ public class Conteudos {
 	public Conteudos() {
 		super();
 	}
+	
+	
+
+	public Conteudos(boolean finalizado) {
+		super();
+		this.finalizado = finalizado;		
+	}
+
+
 
 	public Conteudos(String nome, String descricao) {
 		super();
@@ -107,5 +111,20 @@ public class Conteudos {
 	public void setIdTrilhas(List<Trilhas> idTrilhas) {
 		this.idTrilhas = idTrilhas;
 	}
+
+
+
+	public boolean isFinalizado() {
+		return finalizado;
+	}
+
+
+
+	public void setFinalizado(boolean finalizado) {
+		this.finalizado = finalizado;
+		this.finalizado = false;
+	}
+	
+	
 
 }

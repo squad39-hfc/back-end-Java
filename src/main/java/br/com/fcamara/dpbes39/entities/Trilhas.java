@@ -22,43 +22,38 @@ import lombok.Builder;
 @Entity
 @Builder
 public class Trilhas {
-	
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idTrilha;
-	
+
 	private String nome;
-	
+
 	private int progresso;
-	
-	
-	@ManyToMany	
-	@JoinTable(name="Users_Trilhas",
-    joinColumns={@JoinColumn(name="idTrilha",referencedColumnName = "idTrilha")},
-    inverseJoinColumns={@JoinColumn(name="idUser",referencedColumnName = "id")}) 	
+
+	@ManyToMany
+	@JoinTable(name = "Users_Trilhas", joinColumns = {
+			@JoinColumn(name = "idTrilha", referencedColumnName = "idTrilha") }, inverseJoinColumns = {
+					@JoinColumn(name = "idUser", referencedColumnName = "id") })
 	private List<NewUsers> users = new ArrayList<NewUsers>();
-	
-	
-	@ManyToMany	
-	@JoinTable(name="Conteudos_Trilhas",
-    joinColumns= @JoinColumn(name="idTrilha",referencedColumnName = "idTrilha"),
-    inverseJoinColumns= @JoinColumn(name="idConteudo",referencedColumnName = "id"))   
+
+	@ManyToMany
+	@JoinTable(name = "Conteudos_Trilhas", joinColumns = @JoinColumn(name = "idTrilha", referencedColumnName = "idTrilha"), inverseJoinColumns = @JoinColumn(name = "idConteudo", referencedColumnName = "id"))
 	private List<Conteudos> conteudos = new ArrayList<Conteudos>();
-	
 
 	public Trilhas() {
 		super();
 	}
-	
-	
+
 	public Trilhas(String nome) {
 		super();
 		this.nome = nome;
 	}
 
-
-
+	public Trilhas(int progresso) {
+		super();
+		this.progresso = progresso;
+	}
 
 	public Trilhas(String nome, List<NewUsers> users, List<Conteudos> conteudos) {
 		super();
@@ -67,47 +62,45 @@ public class Trilhas {
 		this.conteudos = conteudos;
 	}
 
-
 	public int getIdTrilha() {
 		return idTrilha;
 	}
-
 
 	public void setIdTrilha(int idTrilha) {
 		this.idTrilha = idTrilha;
 	}
 
-
 	public String getNome() {
 		return nome;
 	}
-
 
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
 
-
 	public List<NewUsers> getUsers() {
 		return users;
 	}
-
 
 	public void setUsers(List<NewUsers> users) {
 		this.users = users;
 	}
 
-
 	public List<Conteudos> getConteudos() {
 		return conteudos;
 	}
-
 
 	public void setConteudos(List<Conteudos> conteudos) {
 		this.conteudos = conteudos;
 	}
 
+	public int getProgresso() {
+		return progresso;
+	}
 
+	public void setProgresso(int progresso) {
+		this.progresso = progresso;
+	}
 	
 	
 

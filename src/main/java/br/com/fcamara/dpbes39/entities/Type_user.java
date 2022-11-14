@@ -21,7 +21,7 @@ public class Type_user {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idType;
 	
-	//@ManyToMany(mappedBy = "users")
+	
 	@ManyToMany
 	@JoinTable(name="typeUsers_users",
     joinColumns= @JoinColumn(name="idType",referencedColumnName = "idType"),
@@ -30,7 +30,7 @@ public class Type_user {
 
 	public Type_user() {
 		super();
-		// TODO Auto-generated constructor stub
+	
 	}
 
 	public Type_user(List<NewUsers> users) {
