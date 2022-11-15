@@ -15,7 +15,6 @@ import javax.persistence.OneToMany;
 
 import lombok.Builder;
 
-
 @Entity
 @Builder
 public class Conteudos {
@@ -27,7 +26,7 @@ public class Conteudos {
 	private String nome;
 
 	private String descricao;
-	
+
 	private boolean finalizado;
 
 	@ManyToMany(mappedBy = "conteudos", cascade = CascadeType.PERSIST)
@@ -42,15 +41,11 @@ public class Conteudos {
 	public Conteudos() {
 		super();
 	}
-	
-	
 
 	public Conteudos(boolean finalizado) {
 		super();
-		this.finalizado = finalizado;		
+		this.finalizado = finalizado;
 	}
-
-
 
 	public Conteudos(String nome, String descricao) {
 		super();
@@ -58,12 +53,10 @@ public class Conteudos {
 		this.descricao = descricao;
 	}
 
-	public Conteudos(List<NewUsers> idUsers, List<Trilhas> idTrilhas) {
-		super();
-		this.idUsers = idUsers;
-		this.idTrilhas = idTrilhas;
-	}
-
+	/*
+	 * public Conteudos(List<NewUsers> idUsers, List<Trilhas> idTrilhas) { super();
+	 * this.idUsers = idUsers; this.idTrilhas = idTrilhas; }
+	 */
 	public int getId() {
 		return id;
 	}
@@ -88,43 +81,30 @@ public class Conteudos {
 		this.descricao = descricao;
 	}
 
-	public List<Medias> getMedias() {
-		return medias;
-	}
-
-	public void setMedias(List<Medias> medias) {
-		this.medias = medias;
-	}
-
-	public List<NewUsers> getIdUsers() {
-		return idUsers;
-	}
-
-	public void setIdUsers(List<NewUsers> idUsers) {
-		this.idUsers = idUsers;
-	}
-
-	public List<Trilhas> getIdTrilhas() {
-		return idTrilhas;
-	}
-
-	public void setIdTrilhas(List<Trilhas> idTrilhas) {
-		this.idTrilhas = idTrilhas;
-	}
-
-
+	 public List<Medias> getMedias() { 
+		 return medias; }
+	 
+	public void setMedias(List<Medias> medias) { 
+		this.medias = medias; }
+	 /*
+	 * public List<NewUsers> getIdUsers() { return idUsers; }
+	 * 
+	 * public void setIdUsers(List<NewUsers> idUsers) { this.idUsers = idUsers; }
+	 * 
+	 * public List<Trilhas> getIdTrilhas() { return idTrilhas; }
+	 * 
+	 * public void setIdTrilhas(List<Trilhas> idTrilhas) { this.idTrilhas =
+	 * idTrilhas; }
+	 * 
+	 */
 
 	public boolean isFinalizado() {
 		return finalizado;
 	}
 
-
-
 	public void setFinalizado(boolean finalizado) {
 		this.finalizado = finalizado;
 		this.finalizado = false;
 	}
-	
-	
 
 }
