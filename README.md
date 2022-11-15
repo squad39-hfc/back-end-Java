@@ -4,13 +4,16 @@ Objetivo
 Disponibilizar API REST reutilizável do projetos de estudo de trilhas de cursos e seus conteudos.
 
 Consumidores da API
+
 As API poderão ser consumida por qualquer framework de sua escolha.
+
 Front: React, VueJS;
+
 Back end: Java versão 17.
 
 Por onde começar?
 1° Instalação:
-2° Escolha uma IDE de sua preferência Exemplo: STS, Eclipse, Inteligin ou qualquer outra.
+2° Escolha uma IDE de sua preferência Exemplo: VSC, Eclipse, Inteligin ou qualquer outra.
 3° Instale o Git.
 4° Escolha um banco de dados de sua preferencia para simular os testes localmente em sua maquina, de preferencia use MySql.
 5° Você pode dar um fork no projeto, clonar em seu PC
