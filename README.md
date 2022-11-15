@@ -37,11 +37,19 @@ Por onde começar?
 
 
 Contribuir para projeto
+
 Projeto open source qualquer pessoal pode contribuir com este projeto
+
 para contribuir entre no grupo do whatsapp através do link abaixo:
+
 Grupo foi criado para todos que desejam contribuir com o projeto API REST.
+
 Todas implementação deve ser criada uma nova branch local e solicitar Pull Request para branch atual informada no grupo.
+
 Cada branch Deve estar documentada 📝 para servir de exemplo para outras pessoas utilizar.
+
 Verificar no grupo qual branch atual para solicitar pull request
+
 Os exemplos de API REST deve ser criados utilizando Spring boot e testados.
+
 Entraremos em contato com o solicitante para verificar se a alteração faz sentido a aplicação.
