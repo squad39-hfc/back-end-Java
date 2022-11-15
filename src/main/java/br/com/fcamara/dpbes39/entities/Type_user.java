@@ -32,12 +32,12 @@ public class Type_user {
 		super();
 	
 	}
-
+	/*
 	public Type_user(List<NewUsers> users) {
 		super();
 		this.users = users;
 	}
-
+    */
 	public Long getIdType() {
 		return idType;
 	}
@@ -45,7 +45,8 @@ public class Type_user {
 	public void setIdType(Long idType) {
 		this.idType = idType;
 	}
-
+    
+	/*
 	public List<NewUsers> getUsers() {
 		return users;
 	}
@@ -54,6 +55,6 @@ public class Type_user {
 		this.users = users;
 	}
 
-	
+	*/
 
 }
