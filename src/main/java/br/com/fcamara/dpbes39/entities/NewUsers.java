@@ -38,15 +38,15 @@ public class NewUsers {
 		this.nome = nome;
 	}
 	
-
+	
 	public NewUsers(Long id, String nome, String email) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.email = email;
 	}
-
-
+    
+	/*
 	public NewUsers(String nome, List<Type_user> type_user,
 			List<Trilhas> trilhas) {
 		super();
@@ -54,7 +54,7 @@ public class NewUsers {
 		Type_user = type_user;
 		Trilhas = trilhas;
 	}
-
+    */
 
 	public Long getId() {
 		return id;

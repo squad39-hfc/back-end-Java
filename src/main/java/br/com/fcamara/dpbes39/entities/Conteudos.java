@@ -53,13 +53,14 @@ public class Conteudos {
 		this.nome = nome;
 		this.descricao = descricao;
 	}
-
+    
+	/*
 	public Conteudos(List<NewUsers> idUsers, List<Trilhas> idTrilhas) {
 		super();
 		this.idUsers = idUsers;
 		this.idTrilhas = idTrilhas;
 	}
-
+    */
 	public int getId() {
 		return id;
 	}
@@ -107,5 +108,15 @@ public class Conteudos {
 	public void setIdTrilhas(List<Trilhas> idTrilhas) {
 		this.idTrilhas = idTrilhas;
 	}
+
+	public boolean isFinalizado() {
+		return finalizado;
+	}
+
+	public void setFinalizado(boolean finalizado) {
+		this.finalizado = finalizado;
+	}
+	
+	
 
 }

@@ -34,9 +34,6 @@ public class TrilhaController {
 	@PostMapping
 	public Trilhas novaTrilha(@RequestParam String nome) {
 		Trilhas trilha = new Trilhas(nome);
-		//Aqui preciso adcionar um conteudo na trilha
-		//Conteudos conteudo = new Conteudos;
-		//trilha.setConteudos(conteudo);
 		trilhaRepository.save(trilha);		
 		return trilha;				
 	}

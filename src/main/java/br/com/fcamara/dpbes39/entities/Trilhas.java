@@ -58,8 +58,13 @@ public class Trilhas {
 	}
 
 
+    
+	public Trilhas(int progresso) {
+		super();
+		this.progresso = progresso;
+	}
 
-
+    /*
 	public Trilhas(String nome, List<NewUsers> users, List<Conteudos> conteudos) {
 		super();
 		this.nome = nome;
@@ -67,7 +72,7 @@ public class Trilhas {
 		this.conteudos = conteudos;
 	}
 
-
+    */
 	public int getIdTrilha() {
 		return idTrilha;
 	}
@@ -108,7 +113,17 @@ public class Trilhas {
 	}
 
 
-	
+	public int getProgresso() {
+		return progresso;
+	}
+
+
+	public void setProgresso(int progresso) {
+		this.progresso = progresso;
+	}
+
+
+	  
 	
 
 }

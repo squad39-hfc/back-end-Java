@@ -46,7 +46,7 @@ public class Medias {
 		this.link = link;
 		this.duration = duration;
 	}
-
+    
 	public int getIdMedias() {
 		return idMedias;
 	}

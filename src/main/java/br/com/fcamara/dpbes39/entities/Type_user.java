@@ -32,12 +32,12 @@ public class Type_user {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
+	/*
 	public Type_user(List<NewUsers> users) {
 		super();
 		this.users = users;
 	}
-
+    */
 	public Long getIdType() {
 		return idType;
 	}
