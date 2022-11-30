@@ -23,7 +23,7 @@ public class NewUsers {
 	@Id	
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	//@Column(nullable = false, unique = true)
-	Long id;
+	int id;
 	String nome;
 	String email;
 	
@@ -32,80 +32,66 @@ public class NewUsers {
 	
 	@ManyToMany(mappedBy = "users", cascade = CascadeType.PERSIST)
 	private List<Trilhas> Trilhas = new ArrayList<Trilhas>();
+
+	public NewUsers() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
 	
 	public NewUsers(String nome) {
 		super();
 		this.nome = nome;
 	}
-	
-	
-	public NewUsers(Long id, String nome, String email) {
+
+
+	public NewUsers(String nome, String email) {
 		super();
-		this.id = id;
 		this.nome = nome;
 		this.email = email;
 	}
-    
-	/*
-	public NewUsers(String nome, List<Type_user> type_user,
-			List<Trilhas> trilhas) {
-		super();
-		this.nome = nome;
-		Type_user = type_user;
-		Trilhas = trilhas;
-	}
-    */
 
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
-
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
-
 
 	public String getNome() {
 		return nome;
 	}
 
-
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
-
-	public List<Type_user> getType_user() {
-		return Type_user;
-	}
-
-
-	public void setType_user(List<Type_user> type_user) {
-		Type_user = type_user;
-	}
-
-
-	public List<Trilhas> getTrilhas() {
-		return Trilhas;
-	}
-
-
-	public void setTrilhas(List<Trilhas> trilhas) {
-		Trilhas = trilhas;
-	}
-
 
 	public String getEmail() {
 		return email;
 	}
 
-
 	public void setEmail(String email) {
 		this.email = email;
 	}
 
+	public List<Type_user> getType_user() {
+		return Type_user;
+	}
 
+	public void setType_user(List<Type_user> type_user) {
+		Type_user = type_user;
+	}
+
+	public List<Trilhas> getTrilhas() {
+		return Trilhas;
+	}
+
+	public void setTrilhas(List<Trilhas> trilhas) {
+		Trilhas = trilhas;
+	}
+	
+	
 	
 
 }
